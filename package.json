@@ -1,0 +1,22 @@
+{
+  "name": "codes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iriskaVV/mmtr-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iriskaVV/mmtr-frontend/issues"
+  },
+  "homepage": "https://github.com/iriskaVV/mmtr-frontend#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}

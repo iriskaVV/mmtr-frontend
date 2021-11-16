@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$font-stack: "Open Sans", sans-serif;
+$x-color-black: #212121;
+$x-color-white: #ffffff;
+$x-color-green: #00897b;
+$x-color-gray: rgb(112, 112, 112);
+$x-color-Lgreen: rgb(60, 189, 176);
+
+$palette-primary: $x-color-white;
+$palette-secondary: $x-color-black;
+$palette-trending: $x-color-green;
+$palette-background: $x-color-gray;
+$palette-change-color: $x-color-Lgreen;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.head{
+    background-color: $palette-primary;
+    place-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 37%;
+    font-size: 2vw;
+    margin-left: 7%;
+    display: flex;
+    font-family: $font-stack;
+    line-height: 22px;
+    color: $palette-secondary;
+    font-weight: 700;
+    align-items: center;
+}
+
+.menu{
+    width: 54%;
+    height: 123px;
+    display: flex;
+    place-content: center;
+    justify-content: space-around;
+    cursor: pointer;
+
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: $font-stack;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        color: $palette-secondary;
+        font-weight: 600;
+    }
+
+    &__search-icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        order: -1;
+    }
+}
+
+.preview-block{
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    background-image: url('../img/1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__image{
+        position: relative;
+        width: 100%;
+        place-content: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    &__title{
+        width: 100%;
+        align-content: center;
+        color: $palette-primary;
+        font-family: $font-stack;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    &__description{
+       width: 100%;
+       color: $palette-primary;
+       font-family: $font-stack;
+       font-size: 2vw;
+       text-align: center;
+    }
+
+    &-buttons{
+        display: flex;
+        justify-content: center;
+
+        &__btn_green{
+            background: $palette-trending;
+            color: $palette-primary;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding: 30px 40px;
+            cursor: pointer;
+            border: 3px solid $palette-trending;
+            margin: 20px;
+
+            &:hover{
+                background: $palette-change-color;
+                border: 3px solid $palette-change-color;
+            }
+        }
+
+        &__btn_white{
+            background: transparent;
+            color: $palette-primary;
+            font-size: 2vw;
+            text-transform: uppercase;
+            padding: 30px 20px;
+            cursor: pointer;
+            margin: 20px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
