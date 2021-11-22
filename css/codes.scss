@@ -156,6 +156,71 @@ html, body{
 
 }
 
+/*Второй блок*/
+
+.description-block_heading{
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+    color: $palette-secondary;
+    font-weight: bold;
+    font-family: "Open Sans";
+    font-size: 2.5vw;
+  }
+  
+  .description-block_text{
+    line-height: 2vw;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+    color: $palette-secondary;
+    font-family: "Open Sans";
+    font-size: 1.5vw;
+  }
+  
+  .description-block_image{
+    background-color: $palette-primary;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 60px;
+    margin-top: 8%;
+  }
+  
+  .description-block__icon{
+    position: relative;
+    place-content: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .description-block__icon {
+    position: relative;
+    place-content: center;
+    display: flex;
+    justify-content: space-around; }
+  
+  .description-block_title-icon{
+    display: flex;
+    font-family: "Open Sans";
+    justify-content: space-around;
+    font-size: 13px;
+    padding: 5px 47px;
+  }
+  
+  .description-block_text-icon{
+    display: flex;
+    text-align: center;
+    font-family: "Open Sans";
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin-top: 2%;
+    padding: 1px 4px;
+  }
+
 
 
 
