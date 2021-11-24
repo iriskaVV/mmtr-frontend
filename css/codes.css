@@ -136,12 +136,12 @@ html, body {
     color: #212121;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5vw; }
-  .description-block_title-text {
+  .description-block_information {
     display: flex;
     justify-content: space-evenly;
     padding: 100px 0px;
     text-align: center; }
-  .description-block__one, .description-block__two, .description-block__three {
+  .description-block__content {
     display: flex;
     justify-content: center;
     flex-direction: column; }
@@ -151,13 +151,13 @@ html, body {
     margin: auto;
     width: 5vw;
     height: 5vw; }
-  .description-block_title-text-heading {
+  .description-block_information-heading {
     display: flex;
     justify-content: space-evenly;
     padding-top: 15%;
     font-family: "Open Sans", sans-serif;
     font-size: 1.8vw; }
-  .description-block_title-text-text {
+  .description-block_information-text {
     display: flex;
     justify-content: space-evenly;
     font-family: "Open Sans", sans-serif;

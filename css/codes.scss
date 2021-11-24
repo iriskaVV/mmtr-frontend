@@ -184,14 +184,14 @@ html, body{
         font-size: 1.5vw;
     }
   
-    &_title-text{
+    &_information{
         display: flex;
         justify-content: space-evenly;
         padding: 100px 0px;
         text-align: center;
     }
   
-    &__one, &__two, &__three{
+    &__content{
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -205,7 +205,7 @@ html, body{
         height: 5vw;
     }
 
-    &_title-text-heading{
+    &_information-heading{
         display: flex;
         justify-content: space-evenly;
         padding-top: 15%;
@@ -213,7 +213,7 @@ html, body{
         font-size: 1.8vw;
     }
 
-    &_title-text-text{
+    &_information-text{
         display: flex;
         justify-content: space-evenly;
         font-family: "Open Sans", sans-serif;
