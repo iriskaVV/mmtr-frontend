@@ -35,15 +35,13 @@ html, body{
 
 .head{
     background-color: $palette-primary;
-    place-content: center;
     display: flex;
     justify-content: space-between;
+    padding: 40px 60px;
 }
 
 .logo{
-    width: 37%;
     font-size: 2vw;
-    margin-left: 7%;
     display: flex;
     font-family: $font-stack;
     line-height: 22px;
@@ -53,16 +51,13 @@ html, body{
 }
 
 .menu{
-    width: 54%;
-    height: 123px;
+    width: 60%;
     display: flex;
-    place-content: center;
     justify-content: space-around;
     cursor: pointer;
 
     &__button{
         display: flex;
-        justify-content: flex-end;
         align-items: center;
         font-family: $font-stack;
         font-size: 1.5vw;
@@ -158,68 +153,74 @@ html, body{
 
 /*Второй блок*/
 
-.description-block_heading{
-    line-height: 22px;
-    display: flex;
-    justify-content: center;
-    margin-top: 11%;
-    color: $palette-secondary;
-    font-weight: bold;
-    font-family: "Open Sans";
-    font-size: 2.5vw;
-  }
-  
-  .description-block_text{
-    line-height: 2vw;
-    align-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 3%;
-    color: $palette-secondary;
-    font-family: "Open Sans";
-    font-size: 1.5vw;
-  }
-  
-  .description-block_image{
-    background-color: $palette-primary;
+.description-block{
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 40px 60px;
-    margin-top: 8%;
-  }
-  
-  .description-block__icon{
-    position: relative;
-    place-content: center;
-    display: flex;
-    justify-content: space-around;
-  }
+    padding: 40px 20px;
+    flex-direction: column;
 
-  .description-block__icon {
-    position: relative;
-    place-content: center;
-    display: flex;
-    justify-content: space-around; }
+    &_heading{
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        margin-top: 11%;
+        color: $palette-secondary;
+        font-weight: bold;
+        font-family: $font-stack;
+        font-size: 2.5vw;
+    }
+
+    &_text{
+        line-height: 2vw;
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3%;
+        color: $palette-secondary;
+        font-family: $font-stack;
+        font-size: 1.5vw;
+    }
   
-  .description-block_title-icon{
-    display: flex;
-    font-family: "Open Sans";
-    justify-content: space-around;
-    font-size: 13px;
-    padding: 5px 47px;
-  }
+    &_title-text{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 100px 0px;
+        text-align: center;
+    }
   
-  .description-block_text-icon{
-    display: flex;
-    text-align: center;
-    font-family: "Open Sans";
-    justify-content: space-evenly;
-    font-size: 15px;
-    margin-top: 2%;
-    padding: 1px 4px;
-  }
+    &__one, &__two, &__three{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &_icon{
+        display: flex;
+        position: inherit;
+        margin: auto;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    &_title-text-heading{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 15%;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.8vw;
+    }
+
+    &_title-text-text{
+        display: flex;
+        justify-content: space-evenly;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5vw;
+        margin-top: 10%;
+    }
+}
 
 
 

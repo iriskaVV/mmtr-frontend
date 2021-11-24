@@ -18,14 +18,12 @@ html, body {
 
 .head {
   background-color: #ffffff;
-  place-content: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 40px 60px; }
 
 .logo {
-  width: 37%;
   font-size: 2vw;
-  margin-left: 7%;
   display: flex;
   font-family: "Open Sans", sans-serif;
   line-height: 22px;
@@ -34,15 +32,12 @@ html, body {
   align-items: center; }
 
 .menu {
-  width: 54%;
-  height: 123px;
+  width: 60%;
   display: flex;
-  place-content: center;
   justify-content: space-around;
   cursor: pointer; }
   .menu__button {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5vw;
@@ -115,61 +110,58 @@ html, body {
       margin: 20px; }
 
 /*Второй блок*/
-.description-block_heading {
-  line-height: 22px;
-  display: flex;
-  justify-content: center;
-  margin-top: 11%;
-  color: #212121;
-  font-weight: bold;
-  font-family: "Open Sans";
-  font-size: 2.5vw; }
-
-.description-block_text {
-  line-height: 2vw;
-  align-content: center;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 3%;
-  color: #212121;
-  font-family: "Open Sans";
-  font-size: 1.5vw; }
-
-.description-block_image {
-  background-color: #ffffff;
+.description-block {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 40px 60px;
-  margin-top: 8%; }
-
-.description-block__icon {
-  position: relative;
-  place-content: center;
-  display: flex;
-  justify-content: space-around; }
-
-.description-block__icon {
-  position: relative;
-  place-content: center;
-  display: flex;
-  justify-content: space-around; }
-
-.description-block_title-icon {
-  display: flex;
-  font-family: "Open Sans";
-  justify-content: space-around;
-  font-size: 13px;
-  padding: 5px 47px; }
-
-.description-block_text-icon {
-  display: flex;
-  text-align: center;
-  font-family: "Open Sans";
-  justify-content: space-evenly;
-  font-size: 15px;
-  margin-top: 2%;
-  padding: 1px 4px; }
+  padding: 40px 20px;
+  flex-direction: column; }
+  .description-block_heading {
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+    color: #212121;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5vw; }
+  .description-block_text {
+    line-height: 2vw;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+    color: #212121;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5vw; }
+  .description-block_title-text {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+    text-align: center; }
+  .description-block__one, .description-block__two, .description-block__three {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  .description-block_icon {
+    display: flex;
+    position: inherit;
+    margin: auto;
+    width: 5vw;
+    height: 5vw; }
+  .description-block_title-text-heading {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8vw; }
+  .description-block_title-text-text {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5vw;
+    margin-top: 10%; }
 
 /*# sourceMappingURL=codes.css.map */
