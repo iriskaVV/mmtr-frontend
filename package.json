@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/iriskaVV/mmtr-frontend#readme",
   "dependencies": {
-    "sass": "^1.43.4"
+    "-": "^0.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.44.0"
   }
 }
