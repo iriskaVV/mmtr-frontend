@@ -33,6 +33,10 @@ html, body{
     width: 100%;
 }
 
+a{
+    text-decoration: none; 
+}
+
 .head{
     background-color: $palette-primary;
     display: flex;
@@ -222,7 +226,7 @@ html, body{
 
 
 /*третий блок*/
-.services-block {
+#services-block {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -328,7 +332,7 @@ html, body{
         padding: 80px;
   
         &-heading {
-            margin-top: 4%;
+            margin-top: 30px;
             line-height: 22px;
             display: flex;
             justify-content: center;
@@ -344,7 +348,7 @@ html, body{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 3%;
+            margin-top: 35px;
             color: $palette-secondary;
             font-family: $font-stack;
             font-size: 1.5vw;
@@ -382,8 +386,7 @@ html, body{
             display: flex;
             justify-content: space-evenly;
             font-family: $font-stack;
-            font-size: 1.5vw;
-            margin-top: 10%; 
+            font-size: 1.5vw; 
         }
     }
     
@@ -392,11 +395,20 @@ html, body{
         display: flex;
         padding: 20px;
 
-    }
+        &-network{
+            width: 55px;
+            display: flex;
+            padding: 15px;
+            border-radius: 11px;
+            justify-content: space-evenly;
+            background-color: #f0f1f1;
+            height: 55px;
 
-    &__massanger:hover{
-        filter: invert(20%);
-        cursor: pointer;
+            &:hover{
+                filter: invert(20%);
+                cursor: pointer;
+            }
+        }
     }
 
     &__circle{
@@ -419,64 +431,6 @@ html, body{
     }
 }
 
-//четвертый блок
-
-.contact-block {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    font-family: $font-stack;
-    background-image: url("../img/background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    &__title{
-        padding: 80px;
-  
-        &-heading {
-            margin-top: 4%;
-            line-height: 22px;
-            display: flex;
-            justify-content: center;
-            color: $palette-primary;
-            font-weight: bold;
-            font-family: $font-stack;
-            font-size: 2.5vw;
-        }
-        &-text {
-            line-height: 2.5vw;
-            align-content: center;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 3%;
-            color: $palette-primary;
-            font-family: $font-stack;
-            font-size: 1.5vw;
-        }
-    }
-
-    &__information{
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;  
-    }
-
-    &__connection{
-        display: flex;
-        justify-content: center;
-    }
-
-    &__photo{
-        display: flex;
-        margin: auto;
-        border-radius: 10px;
-    }
-}
-
 //пятый блок
  
 .contact-block{
@@ -495,7 +449,7 @@ html, body{
         padding: 80px;
 
         &-heading{
-            margin-top: 4%;
+            margin-top: 30px;
             line-height: 22px;
             display: flex;
             justify-content: center;
@@ -512,7 +466,7 @@ html, body{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 3%;
+            margin-top: 35px;
             color: $palette-primary;
             font-family: $font-stack;
             font-size: 1.5vw;
@@ -536,11 +490,20 @@ html, body{
             justify-content: space-evenly;
         }
 
-        &-photo{
-            display: flex;
+        &-network{
             margin: auto;
-            width: 105px;
-            height: 105px; 
+            width: 120px;
+            display: flex;
+            padding: 31px;
+            border-radius: 65px;
+            justify-content: center;
+            background-color: #3949ab;
+            height: 120px;
+
+            &:hover{
+                filter: invert(15%);
+                cursor: pointer;
+            }
         }
 
         &-text{
@@ -548,7 +511,7 @@ html, body{
             justify-content: space-evenly;
             font-family: $font-stack;
             font-size: 1.5vw;
-            margin-top: 10%;
+            margin-top: 35px;
             color: $palette-primary;
             text-align: center; 
         }
@@ -563,12 +526,11 @@ html, body{
 
     &__form{
         display: flex;
-        word-wrap: break-word;
-        resize: none;
-        margin: 0 20px;
+        justify-content: space-between;
 
         &-user{
-            padding-left: 17px;
+            display: flex;
+            padding: 35px;
             width: 40vw;
             height: 6vw;
             border-radius: 10px;
@@ -576,9 +538,10 @@ html, body{
             font-size: 1.5vw;
             letter-spacing: 1px;
             line-height: 28px;
-            color: #212121;
+            color: $palette-secondary;
             font-weight: 600;
             font-family: $font-stack;
+            margin: 18px;
         }
     }
 
@@ -594,7 +557,7 @@ html, body{
         &-user{
             padding-left: 17px;
             padding-top: 16px;
-            width: 85vw;
+            width: 82vw;
             height: 20vw;
             border-radius: 10px;
             background-color: $palette-primary;
@@ -622,24 +585,24 @@ html, body{
     }
 
     &__comment{
-        margin-right: 4.9vw;
+        margin-right: 5.7vw;
         display: flex;
         justify-content: end;
     }
+}
 
-    &__reserved{
-        display: flex;
-        padding: 1vw;
-        justify-content: center;
-        background-color: $palette-primary;
-        text-align: center;
-        font-size: 2vw;
-        letter-spacing: 1px;
-        line-height: 22px;
-        color: $palette-secondary;
-        font-weight: 700;
-        font-family: $font-stack;
-    }
+.contact-block__basement{
+    display: flex;
+    padding: 1vw;
+    justify-content: center;
+    background-color: $palette-primary;
+    text-align: center;
+    font-size: 2vw;
+    letter-spacing: 1px;
+    line-height: 22px;
+    color: $palette-secondary;
+    font-weight: 700;
+    font-family: $font-stack;
 }
 
 
