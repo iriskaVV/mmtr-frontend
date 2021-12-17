@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/codes.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,13 +16,13 @@
             <div class="logo">Your Logo</div>
         
             <div class="menu">
-                <p class="menu__button">Home</p>
-                <p class="menu__button">About</p>
-                <a href="#services-block"><p class="menu__button">Servicing</p></a>
-                <p class="menu__button">Portfolio</p>
-                <p class="menu__button">Blog</p>
-                <p class="menu__button">Contact us</p>  
-                <div class="menu__button"> <img src="img/2.png" alt="" class="menu__search-icon"></div>
+                <p class="menuButton">Home</p>
+                <p class="menuButton">About</p>
+                <p id= "serviceForm" onclick="link" class="menuButton">Servicing</p>
+                <p class="menuButton">Portfolio</p>
+                <p class="menuButton">Blog</p>
+                <p class="menuButton">Contact us</p>  
+                <div class="menuButton"> <img src="img/2.png" alt="" class="menu__search-icon"></div>
             </div>
         
         </div>
@@ -79,7 +78,7 @@
 <!--конец второго блока-->
 
 <!--начало третьего блока-->
-<div id="services-block">
+<div id="servicesBlock" class="services-block">
 
     <div class="services-block__title">
         <h1 class="services-block__title-heading">Our Services</h1>
@@ -149,9 +148,10 @@
     </div>
     <div class="team-block__information">
         <div class="team-block__content">
-            <img src="img/member1.png" alt="" class="team-block__photo">
-            <h2 class="team-block__information-name">John Doe</h2>
-            <p class="team-block__information-position">General Manager</p>
+            <img src="img/member1.png" alt="" class="team-block__content-photo">
+            <h2 class="team-block__content-name">John Doe</h2>
+            <p class="team-block__content-position">General Manager</p>
+            
             <div class="team-block__icon">
                 <div class="team-block__icon-network">
                     <img src="img/facebook.png" alt="" class="team-block__massanger">
@@ -171,9 +171,9 @@
             </div>
         </div>
         <div class="team-block__content">
-            <img src="img/member2.png" alt="" class="team-block__photo">
-            <h2 class="team-block__information-name">Alexa Biru</h2>
-            <p class="team-block__information-position">Office Director</p>
+            <img src="img/member2.png" alt="" class="team-block__content-photo">
+            <h2 class="team-block__content-name">Alexa Biru</h2>
+            <p class="team-block__content-position">Office Director</p>
             <div class="team-block__icon">
                 <div class="team-block__icon-network">
                     <img src="img/facebook.png" alt="" class="team-block__massanger">
@@ -193,9 +193,9 @@
             </div>
         </div>
         <div class="team-block__content">
-            <img src="img/member3.png" alt="" class="team-block__photo">
-            <h2 class="team-block__information-name">Ronobir Sing</h2>
-            <p class="team-block__information-position">Admin</p>
+            <img src="img/member3.png" alt="" class="team-block__content-photo">
+            <h2 class="team-block__content-name">Ronobir Sing</h2>
+            <p class="team-block__content-position">Admin</p>
             <div class="team-block__icon">
                 <div class="team-block__icon-network">
                     <img src="img/facebook.png" alt="" class="team-block__massanger">
@@ -277,5 +277,7 @@
 <footer>
     <div class="contact-block__basement">All rights Reserved © 2017</div>
 </footer>
+
+<script src="js/codes.js" type="text/javascript"></script>
 </body>
 </html>

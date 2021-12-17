@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 $font-stack: "Open Sans", sans-serif;
@@ -60,22 +61,22 @@ a{
     justify-content: space-around;
     cursor: pointer;
 
-    &__button{
-        display: flex;
-        align-items: center;
-        font-family: $font-stack;
-        font-size: 1.5vw;
-        letter-spacing: 1px;
-        color: $palette-secondary;
-        font-weight: 600;
-    }
-
     &__search-icon{
         width: 20px;
         height: 20px;
         margin-right: 10px;
         order: -1;
     }
+}
+
+.menuButton{
+    display: flex;
+    align-items: center;
+    font-family: $font-stack;
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    color: $palette-secondary;
+    font-weight: 600;
 }
 
 .preview-block{
@@ -181,7 +182,7 @@ a{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 3%;
+        margin-top: 50px;
         color: $palette-secondary;
         font-family: $font-stack;
         font-size: 1.5vw;
@@ -226,18 +227,18 @@ a{
 
 
 /*третий блок*/
-#services-block {
+.services-block {
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #e4fdf9;
     flex-direction: column;
     font-family: $font-stack;
-  
-    &__title{
+
+    &__title {
         padding: 80px;
-  
-        &-heading {
+    
+        &-heading{
             margin-top: 4%;
             line-height: 22px;
             display: flex;
@@ -247,42 +248,54 @@ a{
             font-family: $font-stack;
             font-size: 2.5vw;
         }
-        &-text {
+
+        &-text{
             line-height: 2.5vw;
             align-content: center;
             text-align: center;
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 3%;
+            margin-top: 50px;
             color: $palette-secondary;
             font-family: $font-stack;
             font-size: 1.5vw;
         }
     }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-    &-row {
-        justify-content: space-around;
+    &__content{
         display: flex;
-    }
-    &-info {
-        width: 400px;
-        font-size: 1.1vw;
-        margin: 20px 20px 20px;
-        padding: 30px 30px 0px;
-        background-color: $palette-primary;
         flex-direction: column;
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
+        padding: 20px;
 
-            &-text{
-                margin-top: 25px;
+        &-row{
+            justify-content: space-around;
+            display: flex;
+        }
+
+        &-info {
+            width: 400px;
+            font-size: 1.1vw;
+            margin: 20px 20px 20px;
+            padding: 30px 30px 0px;
+            background-color: $palette-primary;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+
+            &:hover{
+                background: $palette-trending;
+                color: $palette-primary;
+                box-shadow: 5px 10px 10px $palette-secondary;
+            }
+
+            &:hover &-icon{
+                filter: invert(1);
+            }
+
+            &:hover &-btn{
+                filter: invert(1);
             }
 
             &-icon{
@@ -290,6 +303,10 @@ a{
                 width: 5vw;
                 height: 5vw;
                 margin: auto;
+            }
+
+            &-text{
+                margin-top: 25px;
             }
 
             &-btn{
@@ -302,18 +319,6 @@ a{
                 cursor: pointer;
                 border: 3px solid $palette-secondary;
                 margin: 46px;
-            }
-        }
-        &-info:hover{
-            background: $palette-trending;
-            color: $palette-primary;
-            box-shadow: 5px 10px 10px $palette-secondary;
-            & .services-block__content-info-icon{
-                filter: invert(1);
-            }
-
-            & .services-block__content-info-btn{
-                filter: invert(1);
             }
         }
     }
@@ -348,7 +353,7 @@ a{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 35px;
+            margin-top: 50px;
             color: $palette-secondary;
             font-family: $font-stack;
             font-size: 1.5vw;
@@ -365,22 +370,22 @@ a{
         display: flex;
         justify-content: center;
         flex-direction: column;
-    }
 
-    &__photo{
-        display: flex;
-        margin: auto;
-        width: 25vw;
-        height: 23vw;
-        border-radius: 10px;
-    }
+        &-photo{
+            display: flex;
+            margin: auto;
+            width: 25vw;
+            height: 23vw;
+            border-radius: 10px;
+        }
 
-    &__information-name{
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 15%;
-        font-family: $font-stack;
-        font-size: 1.8vw;
+        &-name{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 15%;
+            font-family: $font-stack;
+            font-size: 1.8vw;
+        }
 
         &-position{
             display: flex;
@@ -389,7 +394,7 @@ a{
             font-size: 1.5vw; 
         }
     }
-    
+
     &__icon{
         justify-content: space-evenly;
         display: flex;
@@ -433,9 +438,8 @@ a{
 
 //пятый блок
  
-.contact-block{
+.contact-block {
     width: 100%;
-    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -447,7 +451,7 @@ a{
 
     &__title{
         padding: 80px;
-
+        
         &-heading{
             margin-top: 30px;
             line-height: 22px;
@@ -466,30 +470,27 @@ a{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 35px;
+            margin-top: 50px;
             color: $palette-primary;
             font-family: $font-stack;
             font-size: 1.5vw;
         }
     }
-
     &__information{
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-
-        &-icon{
+            
+        &-icon {
             display: flex;
-            justify-content: space-evenly;
-            padding: 30px;
         }
-
+              
         &-connection{
             flex-direction: column;
             display: flex;
-            justify-content: space-evenly;
+            padding: 60px;
         }
-
+              
         &-network{
             margin: auto;
             width: 120px;
@@ -499,29 +500,23 @@ a{
             justify-content: center;
             background-color: #3949ab;
             height: 120px;
-
-            &:hover{
-                filter: invert(15%);
-                cursor: pointer;
-            }
         }
-
+  
         &-text{
             display: flex;
-            justify-content: space-evenly;
             font-family: $font-stack;
             font-size: 1.5vw;
             margin-top: 35px;
             color: $palette-primary;
-            text-align: center; 
+            text-align: center;
         }
     }
-
+        
     &__data{
         display: flex;
         justify-content: space-evenly;
         padding: 60px;
-        text-align: center;
+        text-align: center; 
     }
 
     &__form{
@@ -553,7 +548,7 @@ a{
 
     &__questions{
         display: flex;
-
+            
         &-user{
             padding-left: 17px;
             padding-top: 16px;
@@ -566,8 +561,14 @@ a{
             line-height: 28px;
             color: $palette-secondary;
             font-weight: 600;
-            font-family: $font-stack; 
+            font-family: $font-stack;
         }
+    }
+
+    &__comment{
+        margin-right: 5.7vw;
+        display: flex;
+        justify-content: end;
     }
 
     &__send{
@@ -582,12 +583,6 @@ a{
         padding: 1vw 6vw;
         cursor: pointer;
         margin: 2vw;
-    }
-
-    &__comment{
-        margin-right: 5.7vw;
-        display: flex;
-        justify-content: end;
     }
 }
 
