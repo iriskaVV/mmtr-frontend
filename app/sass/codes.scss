@@ -265,8 +265,7 @@ a{
 
     &__content{
         display: flex;
-        // flex-direction: column;
-        padding: 20px;
+        padding: 10px;
         flex-wrap: wrap;
         justify-content: center;
 
@@ -276,14 +275,12 @@ a{
         }
 
         &-info {
-            width: 500px;
-            font-size: 1.1vw;
-            margin: 20px 20px 20px;
-            padding: 30px 30px 0px;
+            width: 400px;
+            margin: 20px 70px 20px;
+            padding: 50px 40px 0px 40px;
             background-color: $palette-primary;
             flex-direction: column;
             display: flex;
-            justify-content: space-evenly;
             text-align: center;
 
             &:hover{
@@ -302,13 +299,19 @@ a{
 
             &-icon{
                 display: flex;
-                width: 5vw;
-                height: 5vw;
+                width: 70px;
+                height: 70px;
                 margin: auto;
+            }
+
+            &-heading{
+                margin-top: 25px;
+                font-size: 25px;
             }
 
             &-text{
                 margin-top: 25px;
+                font-size: 19px;
             }
 
             &-btn{
@@ -319,8 +322,8 @@ a{
                 text-transform: uppercase;
                 padding: 20px;
                 cursor: pointer;
-                border: 3px solid $palette-secondary;
-                margin: 46px;
+                border: 2.5px solid $palette-secondary;
+                margin: 70px;
             }
         }
     }
