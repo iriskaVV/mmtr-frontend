@@ -266,8 +266,21 @@ a {
   font-size: 25px;
 }
 .services-block__content-info-text {
+  border: 0;
   margin-top: 25px;
+  height: 100px;
   font-size: 19px;
+  background: transparent;
+  text-align: center;
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+.services-block__content-info-text:focus {
+  outline: none;
+}
+.services-block__content-info-text::placeholder {
+  color: #212121;
 }
 .services-block__content-info-btn {
   display: flex;

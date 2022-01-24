@@ -42,51 +42,13 @@ const blockService = [{
 }
 ];
 
-
-// blockService.forEach((item) => {
-//     createElement(item.titleService, item.descriptionService);
-// });
-
-// function createElement(title, description){
-//     //сам блок
-//     const serviceBlock = document.createElement('div');
-//     serviceBlock.className = "services-block__content-info";
-    
-//     //иконка
-//     const iconService = document.createElement("img");
-//     iconService.src = "img/smartphone_copy.png";
-//     iconService.className = "services-block__content-info-icon";
-//     serviceBlock.append(iconService);
-
-//     //заголовок
-//     const titleService = document.createElement("h1");
-//     titleService.className = "services-block__content-info-heading";
-//     serviceBlock.append(titleService);
-
-//     //текст
-//     const descriptionService = document.createElement("p");
-//     descriptionService.className = "services-block__content-info-text";
-//     serviceBlock.append(descriptionService);
-
-//     //кнопка
-//     const btnService = document.createElement("button");
-//     btnService.className = "services-block__content-info-btn";
-//     serviceBlock.append(btnService);
-//     btnService.textContent='READ MORE';
-
-//     servicesBlockContent.appendChild(serviceBlock);
-    
-//     titleService.innerHTML = title;
-//     descriptionService.innerHTML = description;
-// }
-
-class services{
+class Services{
   constructor (titleService, descriptionService){
     this.titleService=titleService;
     this.descriptionService=descriptionService;
   }
 }
-services.prototype.create = function (){
+Services.prototype.create = function (){
   const serviceBlock = document.createElement('div');
   serviceBlock.className = "services-block__content-info";
     
@@ -100,40 +62,43 @@ services.prototype.create = function (){
   const titleService = document.createElement("h1");
   titleService.className = "services-block__content-info-heading";
   serviceBlock.append(titleService);
+  titleService.textContent=this.titleService;
 
   //текст
-  const descriptionService = document.createElement("p");
+  const descriptionService = document.createElement("textarea");
   descriptionService.className = "services-block__content-info-text";
   serviceBlock.append(descriptionService);
+  descriptionService.placeholder=this.descriptionService;
+  descriptionService.disabled = true;
 
   //кнопка
   const btnService = document.createElement("button");
   btnService.className = "services-block__content-info-btn";
   serviceBlock.append(btnService);
-  btnService.textContent='READ MORE';
+  btnService.textContent='EDIT';
+  btnService.addEventListener('click', editSave );
+
 
   servicesBlockContent.appendChild(serviceBlock);
-    
-  // titleService.innerHTML = title;
-  // descriptionService.innerHTML = description;
 }
 
-const services1 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services1.create();
-const services2 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services2.create();
-const services3 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services3.create();
-const services4 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services4.create();
-const services5 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services5.create();
-const services6 = new services ("Research",  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!");
-services6.create();
+blockService.forEach((item) => {
+  const services1 = new Services(item.titleService, item.descriptionService);
+  services1.create();
+});
 
-
-
-
+//Редактирование текста
+function editSave (){
+  if (this.textContent == 'EDIT') {
+      this.textContent = 'SAVE';
+      descriptionService.contentEditable = true;
+      descriptionService.focus();
+  }
+  else {
+      this.textContent = 'EDIT';
+      descriptionService.contentEditable = false;
+  }
+}
 
 
 

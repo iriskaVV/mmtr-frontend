@@ -309,9 +309,24 @@ a{
                 font-size: 25px;
             }
 
-            &-text{
+            &-text {
+                border: 0;
                 margin-top: 25px;
+                height: 100px;
                 font-size: 19px;
+                background: transparent;
+                text-align: center;
+                resize: none;
+                font-family: $font-stack;
+                overflow: hidden;
+                
+                &:focus {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: $palette-secondary;
+                }
             }
 
             &-btn{
