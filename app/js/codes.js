@@ -1,4 +1,3 @@
-debugger
 // переход на services-block
 let serviceFormLink = document.getElementById('serviceForm');
 
@@ -20,7 +19,6 @@ const blockService = [{
   titleService: "Portfolio",
   descriptionService: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!"
 },
-
 {
   titleService: "Support",
   descriptionService: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla illo architecto aspernatur quod. Dolores!"
@@ -42,12 +40,18 @@ const blockService = [{
 }
 ];
 
+const ls = localStorage.getItem('user_editing');
+const userEditing = ls || blockService;
+!ls && localStorage.setItem('user_editing', JSON.stringify(userEditing))
+
+
 class Services{
   constructor (titleService, descriptionService){
     this.titleService=titleService;
     this.descriptionService=descriptionService;
   }
 }
+
 Services.prototype.create = function (){
   const serviceBlock = document.createElement('div');
   serviceBlock.className = "services-block__content-info";
@@ -59,50 +63,49 @@ Services.prototype.create = function (){
   serviceBlock.append(iconService);
 
   //заголовок
-  const titleService = document.createElement("h1");
-  titleService.className = "services-block__content-info-heading";
-  serviceBlock.append(titleService);
-  titleService.textContent=this.titleService;
+  const titleServiceText = document.createElement("h1");
+  titleServiceText.className = "services-block__content-info-heading";
+  serviceBlock.append(titleServiceText);
+  titleServiceText.textContent=this.titleService;
 
   //текст
-  const descriptionService = document.createElement("textarea");
-  descriptionService.className = "services-block__content-info-text";
-  serviceBlock.append(descriptionService);
-  descriptionService.placeholder=this.descriptionService;
-  descriptionService.disabled = true;
+  const descriptionServiceText = document.createElement("textarea");
+  descriptionServiceText.className = "services-block__content-info-text";
+  serviceBlock.append(descriptionServiceText);
+  descriptionServiceText.textContent=this.descriptionService;
 
   //кнопка
   const btnService = document.createElement("button");
   btnService.className = "services-block__content-info-btn";
   serviceBlock.append(btnService);
   btnService.textContent='EDIT';
-  btnService.addEventListener('click', editSave );
-
 
   servicesBlockContent.appendChild(serviceBlock);
+
+  btnService.onclick = function(){
+    const desiredBlock = blockService.find(block => block.titleService === titleServiceText.textContent);
+    // console.log(desiredBlock)
+    // debugger
+    if(btnService.textContent == 'EDIT'){
+      btnService.textContent = 'SAVE';
+      descriptionServiceText.contentEditable = true;
+      descriptionServiceText.focus();
+    }
+    else{
+      btnService.textContent == 'SAVE';
+      btnService.textContent = 'EDIT';
+      descriptionServiceText.contentEditable = false;
+
+
+      const userEditing1 = ls || desiredBlock;
+      !ls && localStorage.setItem('user_editing', JSON.stringify(userEditing1))
+      const data = JSON.parse(localStorage.getItem('user_editing'))
+
+    }
+  }
 }
 
 blockService.forEach((item) => {
   const services1 = new Services(item.titleService, item.descriptionService);
   services1.create();
 });
-
-//Редактирование текста
-function editSave (){
-  if (this.textContent == 'EDIT') {
-      this.textContent = 'SAVE';
-      descriptionService.contentEditable = true;
-      descriptionService.focus();
-  }
-  else {
-      this.textContent = 'EDIT';
-      descriptionService.contentEditable = false;
-  }
-}
-
-
-
-
-
-
-
